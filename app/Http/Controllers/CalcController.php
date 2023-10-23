@@ -6,20 +6,20 @@ use Illuminate\Http\Request;
 
 class CalcController extends Controller
 {
-    public function result($num1,$operator,$num2)
+    public function result($num1, $operator, $num2)
     {
         $result = 0;
-        if ($operator == "addition"){
+        if ($operator == "addition") {
             $result = $num1 + $num2;
-        }elseif($operator == "subtraction"){
+        } elseif ($operator == "subtraction") {
             $result = $num1 - $num2;
-        }elseif($operator == "multiplication"){
+        } elseif ($operator == "multiplication") {
             $result = $num1 * $num2;
-        }elseif($operator == "division"){
+        } elseif ($operator == "division") {
             $result = $num1 / $num2;
         }
-//return $result;
-//echo "{$result}";
+        //return $result;
+        //echo "{$result}";
         return view('message.calculation', ['result' => $result]);
     }
 }
